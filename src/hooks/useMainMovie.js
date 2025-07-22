@@ -15,7 +15,7 @@ const useMainMovie = (id) => {
     const trailer = res.results;
 
     const x = trailer.filter((ele) => ele.type === "Trailer");
-    const filterData = x.length ? x[1] : trailer[1];
+    const filterData = x.length ? x[0] : trailer[0];
     dispatch(addTrailerVideo(filterData));
     console.log(filterData.key);
   };
